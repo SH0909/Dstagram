@@ -6,6 +6,6 @@ class PhotoAdmin(admin.ModelAdmin):
     raw_id_fields=['author']
     list_filter=['created','updated','author']
     search_fields=['text','created']
-    ordering=['updated','-created']
+    ordering=['-updated','-created']
 
 admin.site.register(Photo,PhotoAdmin)
